@@ -6,7 +6,7 @@
 ---
 
 ### Abstract
-This paper presents a multi-agent multimodal fusion framework designed for robust real-time emotion recognition and sentiment analysis. The system integrates visual facial expressions, vocal audio features, and script text embeddings using a late-fusion agent scaffold. We benchmark our architecture across several standard datasets (FER2013, SAVEE, and CMU-MOSEI). Furthermore, we detail the methodologies applied to resolve severe overfitting constraints in vocal audio (7-class SAVEE) and storyboard animation tasks. By implementing Principal Component Analysis (PCA) feature reduction, text-only feature filtering, and L2-regularized Support Vector Machines and Logistic Regression, we increase the 7-class SAVEE test accuracy from **25.00%** to **48.61%**, and the Animated Storyboard test accuracy from **40.21%** to **61.90%**. The final system is deployed and accessible via a live public tunnel at https://injuries-cradle-mar-granny.trycloudflare.com for real-time inference.
+This paper presents a multi-agent multimodal fusion framework designed for robust real-time emotion recognition and sentiment analysis. The system integrates visual facial expressions, vocal audio features, and script text embeddings using a late-fusion agent scaffold. We benchmark our architecture across several standard datasets (FER2013, SAVEE, and CMU-MOSEI). Furthermore, we detail the methodologies applied to resolve severe overfitting constraints in vocal audio (7-class SAVEE) and storyboard animation tasks. By implementing Principal Component Analysis (PCA) feature reduction, text-only feature filtering, and L2-regularized Support Vector Machines and Logistic Regression, we increase the 7-class SAVEE test accuracy from **25.00%** to **48.61%**, and the Animated Storyboard test accuracy from **40.21%** to **61.90%**. The final system is deployed and accessible via a live public tunnel at https://cho-funny-assumptions-sin.trycloudflare.com for real-time inference.
 
 ---
 
@@ -124,9 +124,8 @@ Future iterations will explore:
 
 The model has been deployed to a public server for live evaluation. The interactive web application allows users to perform real-time visual, vocal, and multimodal emotion recognition.
 
-* **Live Model URL**: [https://injuries-cradle-mar-granny.trycloudflare.com](https://injuries-cradle-mar-granny.trycloudflare.com)
+* **Live Model URL**: [https://cho-funny-assumptions-sin.trycloudflare.com](https://cho-funny-assumptions-sin.trycloudflare.com)
 * **Status**: Running and Active (forwarding to port 7860)
 * **Endpoints**: 
-  - Main App: `https://injuries-cradle-mar-granny.trycloudflare.com/`
-  - Health Check: `https://injuries-cradle-mar-granny.trycloudflare.com/health`
-
+  - Main App: `https://cho-funny-assumptions-sin.trycloudflare.com/`
+  - Health Check: `https://cho-funny-assumptions-sin.trycloudflare.com/health`
