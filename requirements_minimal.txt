@@ -1,0 +1,14 @@
+# Minimal Requirements for Quick Demo
+# Install with: pip install -r requirements_minimal.txt
+
+# Core for hackathon demo
+gradio>=4.0.0
+cognee>=0.1.0
+
+# Optional (if you want the full production version)
+# fastapi>=0.104.0
+# uvicorn>=0.24.0
+# sqlalchemy>=2.0.0
+# python-jose>=3.3.0
+# passlib>=1.7.4
+# python-dotenv>=1.0.0

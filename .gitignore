@@ -1,42 +1,84 @@
 # Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # Virtual environments
 .venv/
 venv/
+ENV/
 env/
 
-# Local data and generated ML artifacts
-artifacts/
-datasets/
-outputs/
-catboost_info/
-third_party/
-*.csd
-*.joblib
-*.pkl
-*.pt
-*.pth
-*.onnx
-*.h5
-*.hdf5
+# Environment variables
+.env
+.env.local
 
-# Runtime logs and tunnel state
-*.log
-*.err
-cf_out.txt
-tunnel_url.txt
-
-# Local tools and binaries
-tools/
-*.exe
-
-# OS/editor noise
-.DS_Store
-Thumbs.db
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+debug.log
+cf_live.log
+cloudflared.log
+cloudflared.err
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Artifacts and models (large files)
+artifacts/*.joblib
+artifacts/*.pt
+catboost_info/
+
+# Datasets (large files)
+datasets/
+data/raw/
+*.csd
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+cf_out.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation builds
+docs/_build/
+site/
