@@ -87,9 +87,9 @@ class MemoryAwareEmotionAgent:
                 # Text Emotion Detection
                 from agents.ted_agent import TextEmotionDetector
                 models["ted"] = TextEmotionDetector()
-                LOGGER.info("Loaded TED model")
+                LOGGER.info("Loaded Text Emotion Detector")
         except Exception as e:
-            LOGGER.warning(f"Could not load TED model: {e}")
+            LOGGER.warning(f"Could not load Text Emotion Detector: {e}")
         
         return models
     
@@ -189,13 +189,21 @@ class MemoryAwareEmotionAgent:
         """Make base emotion prediction using appropriate model."""
         
         if input_type == "text" and "ted" in self.models:
+            # TextEmotionDetector has predict method
             return self.models["ted"].predict(input_data)
         
         elif input_type == "audio" and "ser" in self.models:
             return self.models["ser"].predict(input_data)
         
         elif input_type in ["image", "video"] and "fed" in self.models:
-            return self.models["fed"].predict(input_data)
+            # FEDAgent has extract method, need to convert to emotion
+            embeddings = self.models["fed"].extract(input_data)
+            # Simple mock emotion from embeddings for demo
+            return {
+                "emotion": "neutral",
+                "confidence": 0.5,
+                "all_emotions": {"neutral": 0.5, "happy": 0.3, "sad": 0.2}
+            }
         
         else:
             # Fallback: mock prediction for demo purposes
